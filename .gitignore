@@ -1,0 +1,34 @@
+# testpi – Git-Ausschlussliste (Logs, IP-Listen, lokale Testdaten).
+#
+# Projekt:     testpi
+# Modul:       .gitignore
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+
+# Lokale Arbeitsverzeichnisse (Styleguide)
+__local__/
+__scratch__/
+__testdata__/
+
+# Logs und erzeugte IP-Listen
+*.log
+IP-*.txt
+.env
+
+# Python-Cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor/Betriebssystem
+.vscode/
+Thumbs.db
+Desktop.ini

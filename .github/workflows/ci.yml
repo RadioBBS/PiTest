@@ -1,0 +1,36 @@
+# testpi – GitHub-Actions: Unittests ohne Live-Netzauswertung.
+#
+# Projekt:     testpi
+# Modul:       .github/workflows/ci.yml
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-11 – CI fuer unittest und POSIX-sh-Tests.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unittests
+        run: python -m unittest tests.test_testpi
+      - name: Shell-Tests
+        run: sh tests/test_testpi.sh

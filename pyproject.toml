@@ -1,0 +1,32 @@
+# testpi – Projektdefinition (POSIX-sh; pyproject fuer einheitliche Produktstruktur).
+#
+# Projekt:     testpi
+# Modul:       pyproject.toml
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-11 – pyproject.toml fuer das Shell-Produkt.
+#
+# Kein Python-Laufzeitpaket. Tests nutzen die Standardbibliothek.
+
+[project]
+name = "testpi"
+version = "1.0.0"
+description = "Gibt Umgebungsdaten eines Linux-Rechners aus, speichert die IP-Adressen in einer zeitgestempelten Datei und prueft ein Sync-Verzeichnis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "(FFHB) / RadioBBS" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/RadioBBS/PiTest"
+Repository = "https://github.com/RadioBBS/PiTest"

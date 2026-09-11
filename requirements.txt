@@ -1,0 +1,35 @@
+# testpi – Abhaengigkeitsdatei (kein Python-Laufzeitbedarf, keine Paketzeilen).
+#
+# Projekt:     testpi
+# Modul:       requirements.txt
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-11 – Leere Bezugdatei fuer das Shell-Produkt.
+#
+# Dieses Projekt braucht zur Laufzeit kein Python; die Datei bleibt ohne
+# Paketzeilen. Fester Installationsweg (No-Op, pip ignoriert Kommentare):
+#
+#     python -m pip install -r requirements.txt
+#
+# Empfohlen (venv, nur fuer die Unittests auf einem Entwicklungsrechner):
+#
+#     python -m venv .venv
+#     .venv\Scripts\activate
+#     python -m pip install -r requirements.txt
+#
+#     python3 -m venv .venv
+#     source .venv/bin/activate
+#     python3 -m pip install -r requirements.txt
+#
+# Systemvoraussetzungen:
+#
+#     sudo apt-get install iproute2

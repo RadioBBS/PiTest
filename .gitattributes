@@ -1,0 +1,18 @@
+# testpi – Git-Attribute: Zeilenenden je Dateityp festschreiben.
+#
+# Projekt:     testpi
+# Modul:       .gitattributes
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+
+# Unix-Skripte immer LF (Styleguide)
+*.sh text eol=lf
+
+# Rest: automatische Normalisierung
+* text=auto

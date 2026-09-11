@@ -1,0 +1,67 @@
+# Werte muessen mit project_meta.py / Dateikoepfen uebereinstimmen.
+# Styleguide 2.0.2 / Software-Standard 1.5.1 – Agent zuerst diese Datei lesen.
+#
+# Projekt:     testpi
+# Modul:       PROJECT.yaml
+# Version:     1.0.0
+# Stand:       2026-09-11
+# Abhaengig:   POSIX-sh, hostname, date, ip (iproute2), grep, sed, ls; Tests: Python >= 3.10 Stdlib
+# Bezug:       requirements.txt (leer – kein Python-Laufzeitbedarf)
+# Lizenz:      MIT
+# Upstream:    test.sh (FFHB / RadioBBS)
+# Erstellt mit: Cursor Grok 4.6
+# Autor:       (FFHB) / RadioBBS
+#
+# Historie
+# --------
+# Version 1.0.0 – 2026-09-11 – Erstes Git-Produkt aus test.sh.
+
+name: testpi
+description: "Gibt Umgebungsdaten eines Linux-Rechners aus, speichert die IP-Adressen in einer zeitgestempelten Datei und prueft ein Sync-Verzeichnis."
+language: sh
+shell: posix
+python_min: "3.10"
+license: MIT
+version: "1.0.0"
+stand: "2026-09-11"
+author: (FFHB) / RadioBBS
+upstream: "test.sh (FFHB / RadioBBS)"
+scripts:
+  - testpi.sh
+  - test.sh
+  - project_meta.py
+repository:
+  host: github
+  owner: RadioBBS
+  name: PiTest
+  url: https://github.com/RadioBBS/PiTest
+  visibility: public
+  default_branch: main
+standards:
+  styleguide: "2.0.2"
+  styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
+  software_standard: "1.5.1"
+  software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"
+testing:
+  framework: unittest
+  command: python -m unittest tests.test_testpi
+  required: true
+  live_network: false
+cli:
+  help: [--help, -h]
+  version: [--version]
+  wait_at_end: [--Ende, -E]
+  dry_run: [--dry-run]
+maintenance:
+  status: active
+  owner: RadioBBS
+documentation:
+  language: de
+security:
+  secrets_in_repo: false
+  scans_dot_directories: false
+machine_readable:
+  - PROJECT.yaml
+  - pyproject.toml
+  - CITATION.cff
+  - .github/workflows/ci.yml
