@@ -223,6 +223,34 @@ class MetaTests(unittest.TestCase):
         self.assertIn("https://github.com/RadioBBS/PiTest", yaml_text)
         self.assertIn("visibility: public", yaml_text)
 
+    def test_dateizwecke_lokal(self) -> None:
+        """Dateizwecke und GitHub-About stehen in PROJECT.yaml.
+
+        Parameter:
+            keine
+        Rueckgabewert:
+            keine
+        Fehlerfaelle:
+            AssertionError
+        Beispiel:
+            test_dateizwecke_lokal()
+        """
+        yaml_text = (ROOT / "PROJECT.yaml").read_text(encoding="utf-8")
+        self.assertIn("files:", yaml_text)
+        self.assertIn("github_about:", yaml_text)
+        self.assertEqual(yaml_value(yaml_text, "github_about"), meta.BESCHREIBUNG)
+        for rel in (
+            meta.SKRIPT,
+            meta.KOMPAT_SKRIPT,
+            "project_meta.py",
+            "PROJECT.yaml",
+            "README.md",
+            "tests/test_testpi.py",
+            ".github/workflows/ci.yml",
+        ):
+            self.assertIn(f"  {rel}:", yaml_text, f"files: ohne {rel}")
+            self.assertTrue((ROOT / rel).is_file(), f"fehlt: {rel}")
+
     def test_headers_present(self) -> None:
         """Pflichtfelder in allen Projektdateien.
 

@@ -30,6 +30,23 @@ scripts:
   - testpi.sh
   - test.sh
   - project_meta.py
+files:
+  testpi.sh: "POSIX-Skript: Umgebung ausgeben, IP-Datei schreiben, Sync-Verzeichnis pruefen."
+  test.sh: "Kompatibilitaetsaufruf; startet testpi.sh."
+  project_meta.py: "Gemeinsame Metadaten fuer Koepfe, CLI und Tests."
+  PROJECT.yaml: "Maschinenlesbare Projektdefinition; Quelle fuer GitHub-About und Dateizwecke."
+  pyproject.toml: "PEP-621-Metadaten, gleiche Version und Beschreibung."
+  README.md: "Zweck, Installation, Aufruf, Risiken, Tests."
+  CHANGELOG.md: "Aenderungsverlauf in Nutzersprache."
+  LICENSE: "MIT-Lizenztext."
+  CITATION.cff: "Zitation fuer das oeffentliche Repo."
+  requirements.txt: "Leere pip-Bezugdatei (kein Python-Laufzeitbedarf)."
+  .gitignore: "Ausschluss von Logs, IP-Listen, lokalen Ordnern."
+  .gitattributes: "Unix-Skripte mit LF."
+  .github/workflows/ci.yml: "CI: unittest und POSIX-sh-Tests."
+  tests/__init__.py: "Paketmarkierung fuer unittest."
+  tests/test_testpi.py: "Unittests ohne Live-Netz."
+  tests/test_testpi.sh: "Shell-Tests ohne Produktionsdaten."
 repository:
   host: github
   owner: RadioBBS
@@ -37,8 +54,9 @@ repository:
   url: https://github.com/RadioBBS/PiTest
   visibility: public
   default_branch: main
+  github_about: "Gibt Umgebungsdaten eines Linux-Rechners aus, speichert die IP-Adressen in einer zeitgestempelten Datei und prueft ein Sync-Verzeichnis."
 standards:
-  styleguide: "2.0.2"
+  styleguide: "2.0.3"
   styleguide_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\0-Style‑Guide.txt"
   software_standard: "1.5.1"
   software_standard_file: "%USERPROFILE%\\Documents\\Cursor\\.Security-and-Styleguide\\MY-SOFTWARE-STANDARD v1.0.0.txt"

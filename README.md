@@ -94,3 +94,8 @@ Ohne Live-Netzauswertung. Optional mit POSIX-sh: `sh tests/test_testpi.sh`.
 MIT. Siehe `LICENSE`.
 
 Quellcode: https://github.com/RadioBBS/PiTest
+
+Die GitHub-Kurzbeschreibung (About) kommt aus `PROJECT.yaml`
+(`repository.github_about`, identisch zu `description`). Die Rolle jeder
+Projektdatei steht unter `files:` in derselben Datei, nicht in der
+GitHub-Dateiliste (die zeigt nur den letzten Commit).

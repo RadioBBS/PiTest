@@ -25,3 +25,4 @@ Format: `Version X.Y.Z – YYYY-MM-DD – Beschreibung` (neueste unten).
 - Fest verdrahteter Sync-Pfad durch `$HOME/Desktop/SyncPI/<Rechnername>` ersetzt (ueberschreibbar).
 - Tests ohne Live-Netzauswertung.
 - Oeffentliches GitHub-Repo `RadioBBS/PiTest`, `CITATION.cff`.
+- Dateizwecke und GitHub-About in `PROJECT.yaml` (`files:`, `github_about`).
